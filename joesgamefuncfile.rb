@@ -67,24 +67,20 @@ def bangbang
 
 Sound.play('C:\Windows\Media\gunshots_x.wav')
 end
-
 def cockpit
-	puts 
-	
 	crash = rand(2).floor
-	print "\nI need your help will you help?\n> "
-	helpchoice = $stdin.gets.chomp.upcase
- 
+print "\nI need your help will you help?\n> "
+helpchoice = $stdin.gets.chomp.upcase
 	if helpchoice.include?('Y') && crash == 0
 		puts """Im your Captian Dan and I need your help , without you the plane will surely crash........ Between you and Dan 
-		you guys save everyone"""
-		africa
+		you guys save everyone You are totally awesome !!!! When you land you are met by a big ol tourguide.... Do you get in his truck?"""
+		truck 
 	elsif helpchoice.include?('Y') && crash == 1
-		puts "Sorry, you guys couldnt save everyone and they all die."
+		puts "Sorry, you guys couldnt save everyone and the plane crashes in to ocean You tried but you FAILED...."
 		abort
 	elsif helpchoice.include?('N') && crash == 0
-		puts "Well you lucky you all dont die."
-		africa
+		puts "You go back and sit in your seat. Hopefully the plane doesn't crash since yu didn't see what the captian needed... Luckly it doesnt and when you land ayre met by a big ol tourguide..... Do you get in his truck?"
+		truck
 	elsif helpchoice.include?('Y') && crash == 1
 		puts "Well since you didnt help the plane crashes"
 		abort

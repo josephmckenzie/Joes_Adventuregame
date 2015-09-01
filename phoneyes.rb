@@ -63,12 +63,6 @@ print ">"
 swchoice1=$stdin.gets.chomp.upcase
 	if swchoice1.include? ("G")
 	cockpit
-puts """Im your Captian Dan and I need your help #{user_name},
-without you the plane will surely crash........ 
-\n\nWelcome to Africa #{user_name} The weather today is 120 degrees
-\n#{user_name} gets off the plane and is met by a Big ol Tour guide  
-\n\nDo you get in his truck #{user_name}?  yes or no ?
-\n"""
 print ">"
 entertruck
 elsif swchoice1.include? ("S")
