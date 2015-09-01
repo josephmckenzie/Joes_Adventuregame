@@ -75,8 +75,6 @@ def cockpit
 	print "\nI need your help will you help?\n> "
 	helpchoice = $stdin.gets.chomp.upcase
  
-	# if-statement to determine whether user guessed coin side correctly
-	# [MUST RESOLVE] feels very repetitive, try other programming mechanism
 	if helpchoice.include?('Y') && crash == 0
 		puts """Im your Captian Dan and I need your help , without you the plane will surely crash........ Between you and Dan 
 		you guys save everyone"""
