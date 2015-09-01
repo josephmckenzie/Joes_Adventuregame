@@ -64,5 +64,33 @@ Sound.play('C:\Windows\Media\elephant.wav')
 end
 def bangbang
 
+
 Sound.play('C:\Windows\Media\gunshots_x.wav')
 end
+
+def cockpit
+	puts 
+	
+	crash = rand(2).floor
+	print "\nI need your help will you help?\n> "
+	helpchoice = $stdin.gets.chomp.upcase
+ 
+	# if-statement to determine whether user guessed coin side correctly
+	# [MUST RESOLVE] feels very repetitive, try other programming mechanism
+	if helpchoice.include?('Y') && crash == 0
+		puts """Im your Captian Dan and I need your help , without you the plane will surely crash........ Between you and Dan 
+		you guys save everyone"""
+		africa
+	elsif helpchoice.include?('Y') && crash == 1
+		puts "Sorry, you guys couldnt save everyone and they all die."
+		abort
+	elsif helpchoice.include?('N') && crash == 0
+		puts "Well you lucky you all dont die."
+		africa
+	elsif helpchoice.include?('Y') && crash == 1
+		puts "Well since you didnt help the plane crashes"
+		abort
+	end
+end
+
+

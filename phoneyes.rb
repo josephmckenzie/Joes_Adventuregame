@@ -51,7 +51,7 @@ then puts "what who dont use the bathroom?"
 end
 end
 end
-	elsif planechoice.include? ("SO")
+	if planechoice.include? ("SO")
 	then puts """\nWelcome To Southwest Airlines 
 \nThis is Captian Dan speaking Our Flight should
 be smooth sailing from here on out.
@@ -62,7 +62,8 @@ flight attendants to please come to the cockpit.
 print ">"
 swchoice1=$stdin.gets.chomp.upcase
 	if swchoice1.include? ("G")
-	then puts """Im your Captian Dan and I need your help #{user_name},
+	cockpit
+puts """Im your Captian Dan and I need your help #{user_name},
 without you the plane will surely crash........ 
 \n\nWelcome to Africa #{user_name} The weather today is 120 degrees
 \n#{user_name} gets off the plane and is met by a Big ol Tour guide  
@@ -76,4 +77,6 @@ end
 end
 if afrchoice1.include? ("N")
 	puts """Well Fine then We dont want your help anyways"""
-end
+	end
+	end
+	
