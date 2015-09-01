@@ -7,8 +7,11 @@ bangbang
 puts """Do you go chasing after them dirt dirty poachers?"""
 poacherchoice=gets.chomp.upcase
 	if poacherchoice.include?("Y") or poacherchoice.include?("S")
-	then puts "Ismael and #{user_name} go racing after the poachers truck "
-truck
-	else poacherchoice.include?("N")
+	truck
+	puts "Ismael and #{user_name} go racing after the poachers truck "
+end
+	if poacherchoice.include?("N")
 puts """You suck.... Why would you come all the way to africa to help rescue endangered leopards and not go after them mean ol poachers when we spot them?"""
 	end
+	abort
+	

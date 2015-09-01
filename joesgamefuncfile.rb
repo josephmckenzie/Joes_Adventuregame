@@ -15,19 +15,18 @@ def africansafari
 require_relative "africansafari.rb"
 end
 def entertruck
-choice6=$stdin.gets.chomp.upcase
-if choice6 == "YES"
+truckchoice1=$stdin.gets.chomp.upcase
+if truckchoice1.include? ("Y") or truckchoice1.include?("S")
 	then africa
-	elsif choice6 == "NO"
-puts """Why come all this way and not go?"""
+	elsif truckchoice1.include? ("N")
+puts """Why come all this way and not go? \nAre you sure you wont come with me??"""
 end
-puts """ Are you sure you wont go?"""
 print ">"
-choice7 = $stdin.gets.chomp.upcase
-if choice7 =="NO"
+truckchoice2 = $stdin.gets.chomp.upcase
+if truckchoice2.include?("N") or truckchoice2.include?("G")
 	then africa
-	elsif choice7 == "YES"
-puts """Whatever Go home then Goodbye..."""
+	elsif truckchoice2.include? ("Y")
+puts """Whatever Go then, Just know that we aint buying you  aticket home since you thought you could come here on our dime and not help..."""
 end
 end
 def game_start
