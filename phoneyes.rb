@@ -11,12 +11,12 @@ some endangered lepoards
 leopard_roar
 print "\n> "
 choice = $stdin.gets.chomp.upcase
-		if choice.include?("Y") or choice.include?("S")
-		then puts """\n\n#{user_name} you arrive at the airport. Do you want to fly with AmericanAirlines,Delta or Southwest?"""
+	if choice.include?("Y") or choice.include?("S")
+	then puts """\n\n#{user_name} you arrive at the airport. Do you want to fly with AmericanAirlines,Delta or Southwest?"""
 print "\n>"
 choice = $stdin.gets.chomp.upcase
-		if choice.include? ("AM")
-		then puts """Thanks for flying with American airlines. 
+	if choice.include? ("AM")
+	then puts """Thanks for flying with American airlines. 
 Your flight today will last a long time....
 6 hours later or however long it took, you did fall
 asleep after all
@@ -38,7 +38,7 @@ When you ask why? They say because We said so and up here we are the boss...... 
 print">"
 choice=$stdin.gets.chomp.upcase
 	if choice.include?("Y") or choice.include?("S")
-		puts "man they suck"
+	puts "man they suck"
 	elsif choice== "NO" then puts """You go to the restroom and after using the restroom you go back to your seat."""
 flush
 puts """Lucky that they dont sic the air marshal on you but they don't. You arrive in africa and are met by a tour guide Do you get in his truck? yes or no ?"""
@@ -62,8 +62,8 @@ then puts "what who dont use the bathroom?"
 end
 end
 end
-		elsif choice.include? ("SO")
-		then puts """\nWelcome To Southwest Airlines 
+	elsif choice.include? ("SO")
+	then puts """\nWelcome To Southwest Airlines 
 \nThis is Captian Dan speaking Our Flight should
 be smooth sailing from here on out.
 \n\nThree hours in to the flight #{user_name} is asked by 
@@ -72,8 +72,8 @@ flight attendants to please come to the cockpit.
 "\n\n>"
 print ">"
 choice=$stdin.gets.chomp.upcase
-		if choice.include? ("G")
-		then puts """Im your Captian Dan and I need your help #{user_name},
+	if choice.include? ("G")
+	then puts """Im your Captian Dan and I need your help #{user_name},
 without you the plane will surely crash........ 
 \n\nWelcome to Africa #{user_name} The weather today is 120 degrees
 \n#{user_name} gets off the plane and is met by a Big ol Tour guide  
@@ -81,7 +81,7 @@ without you the plane will surely crash........
 \n"""
 print ">"
 entertruck
-		elsif
+	elsif
 choice.include? ("S")
 puts "You stay in your seat and everyone including you die and the game ends"
 end
