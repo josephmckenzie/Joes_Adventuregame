@@ -160,24 +160,13 @@ user_name = ARGV.first
 end
 
 def select_a_weapon
-	# Store weapons in new array
-	weapons = ['M1 30 cal Rifle', '45 cal Handgun', 'Bow and Arrow', 'Shotguns', 'Flamethrower', 'Bare Hands']
- 
-	# Ask user to choose a starting weapon
-	puts "Choose your weapon by typing its associated number: "
- 
-	# Loop through weapons array and print options to console
-	# As items are added to or removed from array
-	# this loop always prints a string containing a number (starting from 1)
-	# and the value in the weapons array at that number
-	(0...weapons.length).each do |indexpos|
+		weapons = ['M1 30 cal Rifle', '45 cal Handgun', 'Bow and Arrow', 'Shotguns', 'Flamethrower', 'Bare Hands']
+ 		puts "Choose your weapon by typing its associated number: "
+ 	(0...weapons.length).each do |indexpos|
 		puts "#{indexpos+1} - #{weapons[indexpos]}"
 	end
-	
-	
-	print "> "
+		print "> "
 	weaponchoice = $stdin.gets.chomp.to_i - 1
 	@selected_weapon = weapons[weaponchoice]
- 
-	puts "You selected: #{@selected_weapon}"
+ 	puts "You selected: #{@selected_weapon}"
 end
