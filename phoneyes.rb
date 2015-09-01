@@ -11,12 +11,11 @@ some endangered lepoards
 leopard_roar
 print "\n> "
 choice = $stdin.gets.chomp.upcase
-	if choice == "YES"
-		then puts """\n\n#{user_name} you arrive at the airport. Do you want to fly with AmericanAirlines, 
-Delta or Southwest?"""
+		if choice.include?("Y") or choice.include?("S")
+		then puts """\n\n#{user_name} you arrive at the airport. Do you want to fly with AmericanAirlines,Delta or Southwest?"""
 print "\n>"
 choice = $stdin.gets.chomp.upcase
-	if choice == "AMERICANAIRLINES"
+		if choice.include? ("AM")
 		then puts """Thanks for flying with American airlines. 
 Your flight today will last a long time....
 6 hours later or however long it took, you did fall
@@ -25,59 +24,46 @@ asleep after all
 \n You get off the plane and are met by a Big ol Tour guide  
 \n Do you get in his truck? yes or no ?"""
 print ">"
-choice6=$stdin.gets.chomp.upcase
-if choice6 == "YES"
-	then africa
-	elsif choice6 == "NO"
-puts """Why come all this way and not go?"""
-end
-puts """ Are you sure you wont go?"""
-print ">"
-choice7 = $stdin.gets.chomp.upcase
-if choice7 =="NO"
-	then africa
-	elsif choice7 == "YES"
-puts """Whatever Go home then Goodbye..."""
-end
-			elsif choice == "DELTA"
+entertruck
+	elsif choice.include? ("DE")
 	then puts """Thank you For flying with Delta today, you had your choice of airlines and well you chose the wrong one.......Our flight
 time should be around 7 hours barring any unforseen circumstances such as pilot error or just plane not caring....(get it..... Plane?)
-During the flight you naturally have to use the bathroom after all its a 7 hour flight and 6 drinks later and well .....
+During the flight you naturally have to use the bathroom after all its a 7 hour flight and 6 drinks later well .....
 \n\nDo you go to the bathroom?"""
 print ">"
 choice=$stdin.gets.chomp.upcase
-if choice== "YES"
-then puts """While getting up to use the restroom, The flight attendants tell you to sit your butt back down....
+	if choice.include?("Y") or choice.include?("S")
+	then puts """While getting up to use the restroom, The flight attendants tell you to sit your butt back down....
 When you ask why? They say because We said so and up here we are the boss...... Do you sit back down?"""
 print">"
 choice=$stdin.gets.chomp.upcase
-if choice=="YES" then puts "man screw them"
-elsif choice== "NO" then puts """You go to the restroom and after using the restroom you go back to your seat."""
+	if choice.include?("Y") or choice.include?("S")
+		puts "man they suck"
+	elsif choice== "NO" then puts """You go to the restroom and after using the restroom you go back to your seat."""
 flush
 puts """Lucky that they dont sic the air marshal on you but they don't. You arrive in africa and are met by a tour guide Do you get in his truck? yes or no ?"""
 print ">"
-choice6=$stdin.gets.chomp.upcase
-if choice6 == "YES" 
-then africa
-	elsif choice6 == "NO"
-puts """Why come all this way and not go?"""
-puts """ Are you sure you wont go?"""
-print ">"
-choice7 = $stdin.gets.chomp.upcase
-if choice7 =="NO"
+choice=$stdin.gets.chomp.upcase
+  if choice.include? ("Y") or gamechoice.include?("S")
 	then africa
-	elsif choice7 == "YES"
+	elsif choice.include? ("N")
+puts """Why come all this way and not go? Are you sure you wont go?"""
+print ">"
+choice = $stdin.gets.chomp.upcase
+if choice.include? ("N")
+	then africa
+	elsif choice.include? ("Y") or gamechoice.include?("S")
 puts """Whatever Go home then Goodbye..."""
 end
 africa
 elsif
-choice=="NO"
+choice.include? ("N")
 then puts "what who dont use the bathroom?" 
 end
 end
 end
-			elsif choice =="SOUTHWEST"
-	then puts """\nWelcome To Southwest Airlines 
+		elsif choice.include? ("SO")
+		then puts """\nWelcome To Southwest Airlines 
 \nThis is Captian Dan speaking Our Flight should
 be smooth sailing from here on out.
 \n\nThree hours in to the flight #{user_name} is asked by 
@@ -86,33 +72,20 @@ flight attendants to please come to the cockpit.
 "\n\n>"
 print ">"
 choice=$stdin.gets.chomp.upcase
-if choice== "GO"
-then puts """Im your Captian Dan and I need your help #{user_name},
+		if choice.include? ("G")
+		then puts """Im your Captian Dan and I need your help #{user_name},
 without you the plane will surely crash........ 
 \n\nWelcome to Africa #{user_name} The weather today is 120 degrees
 \n#{user_name} gets off the plane and is met by a Big ol Tour guide  
 \n\nDo you get in his truck #{user_name}?  yes or no ?
 \n"""
 print ">"
-choice6=$stdin.gets.chomp.upcase
-if choice6 == "YES"
-	then africa
-	elsif choice6 == "NO"
-puts """Why come all this way and not go?"""
-end
-puts """ Are you sure you wont go?"""
-print ">"
-choice7 = $stdin.gets.chomp.upcase
-if choice7 =="NO"
-	then africa
-	elsif choice7 == "YES"
-puts """Whatever Go home then Goodbye..."""
-end
-elsif
-choice=="STAY"
+entertruck
+		elsif
+choice.include? ("S")
 puts "You stay in your seat and everyone including you die and the game ends"
 end
-	end
-			elsif choice == "NO"
+end
+elsif choice.include? ("N")
 	puts """Well Fine then We dont want your help anyways"""
 end

@@ -14,6 +14,22 @@ end
 def africansafari
 require_relative "africansafari.rb"
 end
+def entertruck
+choice6=$stdin.gets.chomp.upcase
+if choice6 == "YES"
+	then africa
+	elsif choice6 == "NO"
+puts """Why come all this way and not go?"""
+end
+puts """ Are you sure you wont go?"""
+print ">"
+choice7 = $stdin.gets.chomp.upcase
+if choice7 =="NO"
+	then africa
+	elsif choice7 == "YES"
+puts """Whatever Go home then Goodbye..."""
+end
+end
 def game_start
 Sound.play('C:\Windows\Media\Morse_x.wav')
 end
@@ -48,5 +64,6 @@ def poanimal
 Sound.play('C:\Windows\Media\elephant.wav')
 end
 def bangbang
+
 Sound.play('C:\Windows\Media\gunshots_x.wav')
 end
