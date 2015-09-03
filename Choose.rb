@@ -1,29 +1,32 @@
 require_relative "joesgamefuncfile.rb"
-game_sounds
 user_name = ARGV.first
-puts """\n\nHey #{user_name} wanna play a game?"""
-print "> "
-gamechoice=$stdin.gets.chomp.upcase
-	gamechoice.include? ("Y") or gamechoice.include?("S")
-puts """\n\n#{user_name} is sitting at home when the phone rings...... 
-\nDo you answer it?"""
+game_sounds
+wanna_play
 incoming_call
-print "\n> "
-phonechoice1 = $stdin.gets.chomp.upcase
-	if phonechoice1.include? ("Y") or phonechoice1.include?("S")
-	phone_yes
-	elsif phonechoice1.include? ("N")
-	then puts """Common #{user_name} Answer the phone man dont miss 
-out. Will you answer ?"""
-print "\n> "
-incoming_call
-phonechoice2 = $stdin.gets.chomp.upcase
-	if phonechoice2.include? ("Y") or phonechoice2.include?("S")
-	then phone_yes
-	elsif phonechoice2.include? ("N")
-	puts """Why didnt you answer the phone?"""
-	end
-	end
-	if gamechoice.include? ("N")
-	then puts "Fine then NO game for you"
-	end
+answer_phone_?
+
+print "\n>"
+planechoice= $stdin.gets.chomp.upcase
+	if planechoice.include? ("AM")
+	puts "Thanks for flying with American airlines. Your flight today will last a very long time...About 5 hours in...." 
+	cockpit
+	"\nWelcome to Africa, The weather today is 120 degrees... You 
+	arrive at the airport in Africa and are met by a Big ol Tourguide"
+	entertruck
+  elsif planechoice.include? ("DE")
+  puts "Thank you For flying with Delta today, you had your choice of airlines and well 
+  you chose the wrong one.......Our flight time should be around 7 hours barring any 
+  unforeseen circumstances such as pilot error or just plane not caring....(get it..... 
+  Plane?) During the flight you naturally have to use the bathroom after all its a 7 hour
+  flight and 6 drinks later well ....."
+delta_bathroom
+cockpit
+	    entertruck
+              end
+  if planechoice.include? ("SO")
+   puts "\nWelcome To Southwest Airlines \nThis is Captain Dan speaking Our Flight should
+be smooth sailing from here on out. \n\nThree hours in to the flight #{user_name} is 
+asked by flight attendants to please come to the cockpit."
+    cockpit
+    entertruck
+  end
