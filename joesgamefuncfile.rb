@@ -47,14 +47,15 @@ end
 #Page functions
 
 def wanna_play
-	user_name = ARGV.first
+	puts "whats your name?"
+	user_name=$stdin.gets.chomp.upcase
 	puts """\nHey #{user_name} wanna play a game?"""
 	print "> "
 	gamechoice=$stdin.gets.chomp.upcase
 	if gamechoice =~ /\d/
 puts "Choose again that was a number"
 	elsif	gamechoice.include? ("Y") or gamechoice.include?("S") 
-	puts """\n\n#{user_name} is sitting at home when the phone rings...... \nDo you answer it?"""
+	puts "\n\n#{user_name} is sitting at home when the phone rings...... \nDo you answer it?"
 	elsif gamechoice.include? ("N") 
   	else abort("Why would you even start a game and then not want to play it?")
 	end
