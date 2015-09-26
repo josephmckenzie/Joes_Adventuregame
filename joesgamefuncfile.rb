@@ -53,7 +53,6 @@ def wanna_play
 	gamechoice=$stdin.gets.chomp.upcase
 	if gamechoice =~ /\d/
 puts "Choose again that was a number"
-gamechoice
 	elsif	gamechoice.include? ("Y") or gamechoice.include?("S") 
 	puts """\n\n#{user_name} is sitting at home when the phone rings...... \nDo you answer it?"""
 	elsif gamechoice.include? ("N") 
@@ -292,7 +291,8 @@ def poachers_1
 	poacherchoice=$stdin.gets.chomp.upcase
 	if poacherchoice.include?("Y") or poacherchoice.include?("S")
 	truck
-	puts "Ismael and #{user_name} go racing after the poachers truck.Chasing after poachers is very dangerous and they start to shoot at you...."
+	puts "Ismael and #{user_name} go racing after the poachers truck.Chasing kafter poachers is very dangerous and
+they start to shoot at you...."
 gunshots
 	abort("This is the end as of so far")
 	else poacherchoice.include?("N")
