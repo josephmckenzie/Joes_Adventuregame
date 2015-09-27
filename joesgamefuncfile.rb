@@ -148,7 +148,7 @@ planechoice= $stdin.gets.chomp.upcase
 		entertruck
 	if planechoice.include? ("SO")
 		puts "\nWelcome To Southwest Airlines \nThis is Captain Dan speaking Our Flight should be smooth sailing from here on out.
-		\n\nThree hours in to the flight #{@user_name} is asked by flight attendants to please come to the cockpit."
+		\n\nThree hours in to the flight......"
 		cockpit
 		entertruck
 	 end
